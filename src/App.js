@@ -9,7 +9,7 @@ import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } fr
 import Amplify from 'aws-amplify';
 import { withAuthenticator, AmplifySignOut  } from '@aws-amplify/ui-react-v1'
 import '@aws-amplify/ui-react/styles.css'
-import awsExports from './Configuration';
+import awsExports from './aws-exports';
 
 Amplify.configure(awsExports);
 
