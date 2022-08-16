@@ -1,0 +1,41 @@
+.campo-texto {
+    margin: 24px 0;
+}
+
+.campo-texto label {
+    display: flex;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+.campo-texto input {
+    background-color: #FFF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.13);
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.formulario form {
+    max-width: 80%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 36px 64px;
+    box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
+}
+
+.titulo {
+    margin: 0;
+    padding: 0;
+    font-size: 44px;
+    
+}
