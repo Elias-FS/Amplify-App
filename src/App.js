@@ -45,29 +45,29 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Notes App</h1>
-      <input
-        onChange={e => setFormData({ ...formData, 'name': e.target.value})}
-        placeholder="Note name"
-        value={formData.name}
-      />
-      <input
-        onChange={e => setFormData({ ...formData, 'description': e.target.value})}
-        placeholder="Note description"
-        value={formData.description}
-      />
-      <button onClick={createNote}>Create Note</button>
-      <div style={{marginBottom: 30}}>
-        {
-          notes.map(note => (
-            <div key={note.id || note.name}>
-              <h2>{note.name}</h2>
-              <p>{note.description}</p>
-              <button onClick={() => deleteNote(note)}>Delete note</button>
-            </div>
-          ))
-        }
-      </div>
+      <h1>Minhas notas</h1>
+        <input
+          onChange={e => setFormData({ ...formData, 'name': e.target.value})}
+          placeholder="Nome da Nota"
+          value={formData.name}
+        />
+        <input
+          onChange={e => setFormData({ ...formData, 'description': e.target.value})}
+          placeholder="Descrição da nota"
+          value={formData.description}
+        />
+        <button onClick={createNote}>Criar Nota</button>
+        <div style={{marginBottom: 30}}>
+          {
+            notes.map(note => (
+              <div key={note.id || note.name}>
+                <h2>{note.name}</h2>
+                <p>{note.description}</p>
+                <button onClick={() => deleteNote(note)}>Deletar Nota</button>
+              </div>
+            ))
+          }
+        </div>
       <AmplifySignOut />
     </div>
   );
