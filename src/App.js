@@ -9,9 +9,9 @@ import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } fr
 import Amplify from 'aws-amplify';
 import { withAuthenticator, AmplifySignOut  } from '@aws-amplify/ui-react-v1'
 import '@aws-amplify/ui-react/styles.css'
-import awsmobile from './aws-exports';
+import awsExports from './Configuration';
 
-Amplify.configure(awsmobile);
+Amplify.configure(awsExports);
 
 const initialFormState = { name: '', description: '' }
 
