@@ -1,7 +1,7 @@
 const awsExports={
     Auth:{
-        'userPoolId':'us-east-1_KuqfgZ7Q6',
-        'userPoolWebClientId':'18lmocals5l7568tl20otagto'
+        'userPoolId':'us-east-1_RhLeEiDfp',
+        'userPoolWebClientId':'6d8rn9hobepjo52pbcj5eu2qtr'
     }
 }
 
