@@ -8,13 +8,8 @@ import CreateNote from './components/Formulario';
 
 Amplify.configure(awsExports);
 
-
-
-
 function App() {
   
-  
-
   return (
     <div className="App">
       <AmplifySignOut />

@@ -38,7 +38,7 @@ const CreateNote = () => {
 
   return (
     <div>
-        <h1 className='titulo'>Minhas notas</h1>
+        <h1 className='titulo'>Minhas notas 🗒</h1>
         <section className='formulario'>
             <form onSubmit={createNote}>
             <div className="campo-texto">
@@ -58,18 +58,25 @@ const CreateNote = () => {
             
             </div>
             </form>
-            <div style={{marginBottom: 30}}>
-                {
-                    notes.map(note => (
-                    <div key={note.id || note.name}>
-                        <h2>{note.name}</h2>
-                        <p>{note.description}</p>
-                        <button onClick={() => deleteNote(note)}>Deletar Nota</button>
-                    </div>
-                    ))
-                }
-            </div>
         </section>
+        
+          
+            <div>
+                  {
+                    notes.map(note => (
+                      <section className='formulario'>
+                        <form>
+                          <div key={note.id || note.name}>
+                            <h2>{note.name}🎯</h2>
+                            <p>{note.description}</p>
+                            <button onClick={() => deleteNote(note)}>Deletar Nota</button>
+                          </div>
+                        </form>
+                      </section>
+                  ))}
+            </div>
+          
+        
     </div>
   )
 }
