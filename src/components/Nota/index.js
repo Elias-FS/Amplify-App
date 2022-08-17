@@ -1,4 +1,4 @@
-import './Formulario.css'
+import './Notas.css'
 
 import React, { useState, useEffect } from 'react';
 import { API } from 'aws-amplify';
@@ -55,16 +55,13 @@ const CreateNote = () => {
             value={formData.description}
             />
             <Botao>Criar Nota</Botao>
-            
             </div>
             </form>
         </section>
-        
-          
             <div>
                   {
                     notes.map(note => (
-                      <section className='formulario'>
+                      <section className='nota'>
                         <form>
                           <div key={note.id || note.name}>
                             <h2>{note.name}🎯</h2>

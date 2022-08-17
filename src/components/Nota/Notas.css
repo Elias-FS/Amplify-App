@@ -1,0 +1,83 @@
+.campo-texto {
+    margin: 24px 0;
+}
+
+.campo-texto label {
+    display: flex;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+.campo-texto input {
+    background-color: #FFF;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.13);
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    padding: 4%;
+    box-sizing: border-box;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.formulario form {
+    max-width: 80%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 36px 64px;
+    box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
+}
+
+.nota {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.nota form:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.25);
+}
+
+.nota form {
+    max-width: 80%;
+    background-color:#ffffcc;
+    border-left: 6px solid #ffeb3b;
+    border-radius: 0px 20px 0px 0px;
+    padding: 36px 64px;
+    box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
+    transition: transform .2s;
+}
+
+.nota button{
+    background-color:#F2F2F2;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 32px;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    margin: 32px 0;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.13);
+}
+
+.nota button:hover {
+    color:#2196F3;
+}
+
+.nota img{
+    width: 400
+}
+
+.titulo {
+    margin: 0;
+    padding: 0;
+    font-size: 44px;
+    
+}
