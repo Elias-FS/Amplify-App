@@ -35,6 +35,7 @@ const CreateNote = () => {
         if (note.image) {
           const image = await Storage.get(note.image);
           note.image = image;
+          console.log(image)
         }
         return note;
       })
@@ -50,6 +51,7 @@ const CreateNote = () => {
       variables: { input: formData },
     });
     if (formData.image) {
+      console.log(formData.image)
       const image = await Storage.get(formData.image);
       formData.image = image;
     }
@@ -58,12 +60,24 @@ const CreateNote = () => {
   }
 
   async function deleteNote({ id }) {
+    const apiData = await API.graphql({ query: listNotes });
     const newNotesArray = notes.filter((note) => note.id !== id);
+    const notesFromAPI = apiData.data.listNotes.items;
     setNotes(newNotesArray);
     await API.graphql({
       query: deleteNoteMutation,
       variables: { input: { id } },
     });
+    await Promise.all(
+      notesFromAPI.map(async (note) => {
+        if (note.image) {
+          const image = await Storage.remove(note.image);
+          note.image = image;
+          console.log(image)
+        }
+        return note;
+      })
+    );
   }
 
   return (
